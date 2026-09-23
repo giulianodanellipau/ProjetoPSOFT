@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda - HelpSanca</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- css da página da ajuda -->
+    <link rel="stylesheet" href="../css/ajuda.css">
+
+    <!-- js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/ajuda.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Sidebar / Menu Lateral -->
+    <div id="openSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>HelpSanca</h2>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="ocorrencia.html">Minhas Ocorrências</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="config.html">Configurações</a>
+            <a href="profile.html">Perfil</a>
+            <a href="mainPage.html" id="logout" class="logout-btn">Sair</a>
+        </nav>
+    </div>
+
+    <!-- mapa e menu -->
+    <div id="main">
+        <button class="botao-abrir-menu openbtn" onclick="openNav()">
+            <span>☰</span> Menu
+        </button>
+        <div id="mapa"></div>
+    </div>
+
+    <!-- central de ajuda-->
+    <div class="cartao-ajuda">
+        <h1>Central de Ajuda</h1>
+
+        <!-- frase de apresentação -->
+        <div class="secao-ajuda">
+            <p class="texto-introducao">Como podemos te ajudar hoje?</p>
+        </div>
+
+        <!-- dúvidas -->
+        <div class="lista-perguntas">
+
+            <div class="secao-ajuda">
+                <h3>Como registrar uma ocorrência?</h3>
+                <span class="texto-suporte">Clique no botão "+" no mapa, selecione o local e descreva o problema
+                    enfrentado na cidade.</span>
+            </div>
+
+            <div class="secao-ajuda">
+                <h3>O mapa não mostra minha localização</h3>
+                <span class="texto-suporte">Verifique se o GPS do celular/computador está ativado e se você deu
+                    permissão no navegador.</span>
+            </div>
+
+            <div class="secao-ajuda">
+                <h3>Meus dados ficam públicos?</h3>
+                <span class="texto-suporte">Não. Suas informações pessoais ficam totalmente protegidas e não aparecem
+                    nos marcadores públicos.</span>
+            </div>
+
+        </div>
+
+        <!-- botão pro feedback -->
+        <a href="feedback.html" class="botao-ajuda">Relatar um Problema / Feedback</a>
+
+        <!-- links posicionados lado a lado -->
+        <div class="grupo-links">
+            <a href="map.html" class="link-voltar">Voltar</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

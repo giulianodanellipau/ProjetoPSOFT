@@ -196,7 +196,7 @@ if (linkLogout) {
         alert("Sessão encerrada com sucesso!");
         
         // Redireciona para a página inicial/login se necessário
-        window.location.assign("../mainPage.html")
+        window.location.assign("../index.html")
     });
 }
 

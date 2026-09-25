@@ -12,10 +12,10 @@ async function cadastrarUsuario(dadosUsuario) {
     }
 
     // Retorna o objeto JSON do usuário criado retornado pelo backend
-    return await resposta.json(); 
+    return await resposta.json();
 }
 
-document.getElementById('signUpForm').addEventListener('submit', async function(e){
+document.getElementById('signUpForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const nomeInput = document.getElementById('nome-cadastro');
@@ -27,8 +27,10 @@ document.getElementById('signUpForm').addEventListener('submit', async function(
         return;
     }
 
-    if(senhaInput < 8){
-        alert("A senha deve conter no mínimo 8 caracteres");
+    const numSenha = Array.from(senhaInput);
+
+    if (numSenha.length < 8) {
+        alert("A senha deve ter no mínimo 8 caracteres")
     }
 
     const dadosUsuario = {
@@ -40,13 +42,13 @@ document.getElementById('signUpForm').addEventListener('submit', async function(
     try {
         // 1. Aguarda a criação do usuário no banco
         const usuarioCriado = await cadastrarUsuario(dadosUsuario);
-        
+
         // 2. Salva os dados no localStorage convertendo para String JSON
         localStorage.setItem('usuario', JSON.stringify(usuarioCriado));
 
         // 3. Redireciona a tela
         window.location.assign("map.html");
-    
+
     } catch (erro) {
         console.error("Erro na operação:", erro);
         alert("Ops! Ocorreu um erro ao salvar. Verifique o console do navegador (F12).");

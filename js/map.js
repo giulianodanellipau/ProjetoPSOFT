@@ -1,21 +1,21 @@
 // --- Dicionário com os caminhos dos ícones ---
 const iconesPorTipo = {
-    "Buraco pequeno": "../img/Hole.png",
-    "Buraco médio": "../img/Hole.png",
-    "Buraco grande": "../img/Hole.png",
-    "Enchente": "../img/Flood.png",
-    "Entulho / Deslizamento": "../img/Landslide.png",
-    "Incêndio": "../img/Fire.png",
-    "Vazamento de esgoto": "../img/Sewage.png",
-    "Vazamento de água": "../img/Leakage.png",
-    "Mato alto": "../img/Grass.png",
-    "Outro...": "../img/yellowWarning.png"
+    "Buraco pequeno": "Hole.png",
+    "Buraco médio": "Hole.png",
+    "Buraco grande": "Hole.png",
+    "Enchente": "Flood.png",
+    "Entulho / Deslizamento": "Landslide.png",
+    "Incêndio": "Fire.png",
+    "Vazamento de esgoto": "Sewage.png",
+    "Vazamento de água": "Leakage.png",
+    "Mato alto": "Grass.png",
+    "Outro...": "yellowWarning.png"
 };
 
 // --- Função para gerar L.icon com segurança ---
 function criarIconePersonalizado(caminhoImagem) {
     return L.icon({
-        iconUrl: caminhoImagem || "../img/yellowWarning.png",
+        iconUrl: caminhoImagem || "yellowWarning.png",
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32],
@@ -105,7 +105,7 @@ customOptions.forEach(option => {
         topicoSelecionadoTexto = texto;
 
         if (minimapMarker && minimap) {
-            const imagemIconeAtual = iconesPorTipo[topicoSelecionadoTexto] || "../img/yellowWarning.png";
+            const imagemIconeAtual = iconesPorTipo[topicoSelecionadoTexto] || "yellowWarning.png";
             minimapMarker.setIcon(criarIconePersonalizado(imagemIconeAtual));
         }
 
@@ -190,7 +190,7 @@ function posicionarPontoNoMinimapa(latitude, longitude, textoEndereco = null) {
         minimap.removeLayer(minimapMarker);
     }
 
-    const imagemIconeAtual = iconesPorTipo[topicoSelecionadoTexto] || "../img/yellowWarning.png";
+    const imagemIconeAtual = iconesPorTipo[topicoSelecionadoTexto] || "yellowWarning.png";
     const iconeMinimapa = criarIconePersonalizado(imagemIconeAtual);
 
     minimapMarker = L.marker([mapLat, mapLng], {
@@ -275,7 +275,7 @@ async function mostrarMarkers() {
                 ? new Date(markerData.dataHora).toLocaleString('pt-BR') 
                 : "Data não registrada";
 
-            const imagemIcone = iconesPorTipo[tipo] || "../img/yellowWarning.png";
+            const imagemIcone = iconesPorTipo[tipo] || "yellowWarning.png";
             const iconePersonalizado = criarIconePersonalizado(imagemIcone);
 
             const popupConteudo = `

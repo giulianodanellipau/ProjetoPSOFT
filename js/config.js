@@ -29,7 +29,7 @@ function posicionarPontoNoMinimapa(latitude, longitude, textoEndereco = null) {
         minimap.removeLayer(minimapMarker);
     }
 
-    const imagemIconeAtual = iconesPorTipo[topicoSelecionadoTexto] || "../img/yellowWarning.png";
+    const imagemIconeAtual = iconesPorTipo[topicoSelecionadoTexto] || "yellowWarning.png";
     const iconeMinimapa = criarIconePersonalizado(imagemIconeAtual);
 
     minimapMarker = L.marker([mapLat, mapLng], {

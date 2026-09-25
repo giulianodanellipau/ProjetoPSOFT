@@ -403,7 +403,7 @@ if (linkLogout) {
         alert("Sessão encerrada com sucesso!");
         
         // Redireciona para a página inicial/login se necessário
-        window.location.assign("../html/mainPage.html")
+        window.location.assign("../mainPage.html")
     });
 }
 

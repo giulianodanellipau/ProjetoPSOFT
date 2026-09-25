@@ -53,7 +53,7 @@ if (formReport) {
 
                     localStorage.removeItem('usuario');
 
-                    window.location.assign("../html/login.html")
+                    window.location.assign("../login.html")
                 } catch (erro) {
 
                     console.error("Erro na operação:", erro);
@@ -87,7 +87,7 @@ function logout() {
             localStorage.removeItem('usuario');
 
             // Redireciona para a página inicial/login se necessário
-            window.location.assign("../html/mainPage.html")
+            window.location.assign("../mainPage.html")
         });
     }
 }

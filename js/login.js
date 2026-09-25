@@ -19,7 +19,7 @@ document.getElementById("loginForm").addEventListener('submit', async (e) => {
             // Agora 'resposta.json()' funcionará pois o Java enviará o objeto do Usuário
             const usuarioLogado = await resposta.json();
             localStorage.setItem('usuario', JSON.stringify(usuarioLogado));
-            window.location.assign("../map.html");
+            window.location.assign("map.html");
         } 
         else if (resposta.status === 401) {
             alert("Credenciais incorretas.");

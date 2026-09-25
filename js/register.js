@@ -41,7 +41,7 @@ document.getElementById('signUpForm').addEventListener('submit', async function(
         localStorage.setItem('usuario', JSON.stringify(usuarioCriado));
 
         // 3. Redireciona a tela
-        window.location.assign("../map.html");
+        window.location.assign("map.html");
     
     } catch (erro) {
         console.error("Erro na operação:", erro);
